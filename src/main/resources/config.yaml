@@ -1,0 +1,5 @@
+csvFilePath: "path/to/csvfile.csv"
+dbUrl: "jdbc:mysql://localhost:3306/trading"
+dbUser: "username"
+dbPassword: "password"
+outputPath: "path/to/output.proto"
