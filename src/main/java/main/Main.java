@@ -22,7 +22,7 @@ public class Main {
 
             // Extract data from DB
             DbExtractor dbExtractor = new DbExtractor();
-            Dataset<Row> dbData = dbExtractor.extract(config.dbUrl, config.dbUser, config.dbPassword, spark);
+            Dataset<Row> dbData = dbExtractor.extract(config.dbUrl, spark);
 
             // Combine datasets
             Dataset<Row> combinedData = csvData.union(dbData);

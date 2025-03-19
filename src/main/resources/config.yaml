@@ -1,5 +1,3 @@
-csvFilePath: "path/to/csvfile.csv"
+csvFilePath: "/Users/sigmoid/miscFiles/tradingFile.csv"
 dbUrl: jdbc:sqlite:/Users/sigmoid/db/tradingETL.db
-dbUser: ""
-dbPassword: "password"
-outputPath: "path/to/output.proto"
+outputPath: "/Users/sigmoid/miscFiles/output.proto"
