@@ -23,6 +23,18 @@ public class ProtoConverter {
     private Message convertRowToProto(Row row) {
         // Implement the conversion logic here
         // Example: return TradingDataProto.newBuilder().setField(row.getString(0)).build();
-        return null; // Placeholder
+        // Replace with actual implementation
+        return TradingDataProto.newBuilder()
+                .setTransactionID(row.getInt(0))
+                .setDate(row.getString(1))
+                .setTime(row.getString(2))
+                .setStockSymbol(row.getString(3))
+                .setAction(row.getString(4))
+                .setQuantity(row.getInt(5))
+                .setPrice(row.getDouble(6))
+                .setName(row.getString(7))
+                .setKerboros(row.getString(8))
+                .setComments(row.getString(9))
+                .build();
     }
 }
