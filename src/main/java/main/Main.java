@@ -14,7 +14,10 @@ public class Main {
     public static void main(String[] args) {
         try {
             Config config = ConfigLoader.loadConfig("src/main/resources/config.yaml");
-            SparkSession spark = SparkSession.builder().appName("ETL Pipeline").getOrCreate();
+            SparkSession spark = SparkSession.builder()
+                    .appName("ETL Pipeline")
+                    .master("local[*]") // Set master URL to local
+                    .getOrCreate();
 
             // Extract data from CSV
             CsvExtractor csvExtractor = new CsvExtractor();
