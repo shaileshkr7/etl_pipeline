@@ -9,7 +9,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import transform.Deduplicator;
-import proto.TradingDataProto; // Add this import
+import proto.TradingDataOuterClass.TradingData; // Add this import
 
 public class Main {
     public static void main(String[] args) {

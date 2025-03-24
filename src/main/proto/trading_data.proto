@@ -11,6 +11,6 @@ message TradingData {
   int32 quantity = 6;
   double price = 7;
   string name = 8;
-  string kerboros = 9;
+  string kerberos = 9;
   string comments = 10;
 }

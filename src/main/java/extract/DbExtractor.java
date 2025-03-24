@@ -9,6 +9,6 @@ import java.util.Properties;
 public class DbExtractor {
     public Dataset<Row> extract(String url, SparkSession spark) {
         Properties connectionProperties = new Properties();
-        return spark.read().jdbc(url, "trading_data", connectionProperties);
+        return spark.read().jdbc(url, "tradingData", connectionProperties);
     }
 }
