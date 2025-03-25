@@ -5,6 +5,8 @@ import config.ConfigLoader;
 import extract.CsvExtractor;
 import extract.DbExtractor;
 import load.ProtoConverter;
+import load.ProtoReader;
+
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
@@ -38,6 +40,10 @@ public class Main {
             // Convert to Proto
             ProtoConverter protoConverter = new ProtoConverter();
             protoConverter.convertToProto(deduplicatedData, config.outputPath);
+
+            // Read and print Proto data
+            ProtoReader protoReader = new ProtoReader();
+            protoReader.readProtoFile(config.outputPath);
 
             spark.stop();
         } catch (Exception e) {

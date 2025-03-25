@@ -30,106 +30,97 @@ public final class TradingDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 transaction_id = 1;</code>
+     * <code>int32 transactionId = 1;</code>
      * @return The transactionId.
      */
     int getTransactionId();
 
     /**
-     * <code>string date = 2;</code>
-     * @return The date.
-     */
-    java.lang.String getDate();
-    /**
-     * <code>string date = 2;</code>
-     * @return The bytes for date.
-     */
-    com.google.protobuf.ByteString
-        getDateBytes();
-
-    /**
-     * <code>string time = 3;</code>
-     * @return The time.
-     */
-    java.lang.String getTime();
-    /**
-     * <code>string time = 3;</code>
-     * @return The bytes for time.
-     */
-    com.google.protobuf.ByteString
-        getTimeBytes();
-
-    /**
-     * <code>string stock_symbol = 4;</code>
+     * <code>string stockSymbol = 2;</code>
      * @return The stockSymbol.
      */
     java.lang.String getStockSymbol();
     /**
-     * <code>string stock_symbol = 4;</code>
+     * <code>string stockSymbol = 2;</code>
      * @return The bytes for stockSymbol.
      */
     com.google.protobuf.ByteString
         getStockSymbolBytes();
 
     /**
-     * <code>string action = 5;</code>
+     * <code>string action = 3;</code>
      * @return The action.
      */
     java.lang.String getAction();
     /**
-     * <code>string action = 5;</code>
+     * <code>string action = 3;</code>
      * @return The bytes for action.
      */
     com.google.protobuf.ByteString
         getActionBytes();
 
     /**
-     * <code>int32 quantity = 6;</code>
+     * <code>int32 quantity = 4;</code>
      * @return The quantity.
      */
     int getQuantity();
 
     /**
-     * <code>double price = 7;</code>
+     * <code>double price = 5;</code>
      * @return The price.
      */
     double getPrice();
 
     /**
-     * <code>string name = 8;</code>
+     * <code>string name = 6;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 8;</code>
+     * <code>string name = 6;</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string kerberos = 9;</code>
+     * <code>string kerberos = 7;</code>
      * @return The kerberos.
      */
     java.lang.String getKerberos();
     /**
-     * <code>string kerberos = 9;</code>
+     * <code>string kerberos = 7;</code>
      * @return The bytes for kerberos.
      */
     com.google.protobuf.ByteString
         getKerberosBytes();
 
     /**
-     * <code>string comments = 10;</code>
+     * <code>string comments = 8;</code>
      * @return The comments.
      */
     java.lang.String getComments();
     /**
-     * <code>string comments = 10;</code>
+     * <code>string comments = 8;</code>
      * @return The bytes for comments.
      */
     com.google.protobuf.ByteString
         getCommentsBytes();
+
+    /**
+     * <code>.proto.TradingData.TransTime transTime = 9;</code>
+     * @return Whether the transTime field is set.
+     */
+    boolean hasTransTime();
+    /**
+     * <code>.proto.TradingData.TransTime transTime = 9;</code>
+     * @return The transTime.
+     */
+    proto.TradingDataOuterClass.TradingData.TransTime getTransTime();
+    /**
+     * <code>.proto.TradingData.TransTime transTime = 9;</code>
+     */
+    proto.TradingDataOuterClass.TradingData.TransTimeOrBuilder getTransTimeOrBuilder();
   }
   /**
    * Protobuf type {@code proto.TradingData}
@@ -153,8 +144,6 @@ public final class TradingDataOuterClass {
       super(builder);
     }
     private TradingData() {
-      date_ = "";
-      time_ = "";
       stockSymbol_ = "";
       action_ = "";
       name_ = "";
@@ -175,10 +164,669 @@ public final class TradingDataOuterClass {
               proto.TradingDataOuterClass.TradingData.class, proto.TradingDataOuterClass.TradingData.Builder.class);
     }
 
-    public static final int TRANSACTION_ID_FIELD_NUMBER = 1;
+    public interface TransTimeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:proto.TradingData.TransTime)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string date = 1;</code>
+       * @return The date.
+       */
+      java.lang.String getDate();
+      /**
+       * <code>string date = 1;</code>
+       * @return The bytes for date.
+       */
+      com.google.protobuf.ByteString
+          getDateBytes();
+
+      /**
+       * <code>string time = 2;</code>
+       * @return The time.
+       */
+      java.lang.String getTime();
+      /**
+       * <code>string time = 2;</code>
+       * @return The bytes for time.
+       */
+      com.google.protobuf.ByteString
+          getTimeBytes();
+    }
+    /**
+     * Protobuf type {@code proto.TradingData.TransTime}
+     */
+    public static final class TransTime extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:proto.TradingData.TransTime)
+        TransTimeOrBuilder {
+    private static final long serialVersionUID = 0L;
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 29,
+          /* patch= */ 3,
+          /* suffix= */ "",
+          TransTime.class.getName());
+      }
+      // Use TransTime.newBuilder() to construct.
+      private TransTime(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private TransTime() {
+        date_ = "";
+        time_ = "";
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.TradingDataOuterClass.internal_static_proto_TradingData_TransTime_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.TradingDataOuterClass.internal_static_proto_TradingData_TransTime_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.TradingDataOuterClass.TradingData.TransTime.class, proto.TradingDataOuterClass.TradingData.TransTime.Builder.class);
+      }
+
+      public static final int DATE_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object date_ = "";
+      /**
+       * <code>string date = 1;</code>
+       * @return The date.
+       */
+      @java.lang.Override
+      public java.lang.String getDate() {
+        java.lang.Object ref = date_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          date_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string date = 1;</code>
+       * @return The bytes for date.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDateBytes() {
+        java.lang.Object ref = date_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          date_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TIME_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object time_ = "";
+      /**
+       * <code>string time = 2;</code>
+       * @return The time.
+       */
+      @java.lang.Override
+      public java.lang.String getTime() {
+        java.lang.Object ref = time_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          time_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string time = 2;</code>
+       * @return The bytes for time.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTimeBytes() {
+        java.lang.Object ref = time_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          time_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessage.isStringEmpty(date_)) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 1, date_);
+        }
+        if (!com.google.protobuf.GeneratedMessage.isStringEmpty(time_)) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 2, time_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessage.isStringEmpty(date_)) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(1, date_);
+        }
+        if (!com.google.protobuf.GeneratedMessage.isStringEmpty(time_)) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(2, time_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof proto.TradingDataOuterClass.TradingData.TransTime)) {
+          return super.equals(obj);
+        }
+        proto.TradingDataOuterClass.TradingData.TransTime other = (proto.TradingDataOuterClass.TradingData.TransTime) obj;
+
+        if (!getDate()
+            .equals(other.getDate())) return false;
+        if (!getTime()
+            .equals(other.getTime())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDate().hashCode();
+        hash = (37 * hash) + TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getTime().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static proto.TradingDataOuterClass.TradingData.TransTime parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(proto.TradingDataOuterClass.TradingData.TransTime prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code proto.TradingData.TransTime}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:proto.TradingData.TransTime)
+          proto.TradingDataOuterClass.TradingData.TransTimeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return proto.TradingDataOuterClass.internal_static_proto_TradingData_TransTime_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return proto.TradingDataOuterClass.internal_static_proto_TradingData_TransTime_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  proto.TradingDataOuterClass.TradingData.TransTime.class, proto.TradingDataOuterClass.TradingData.TransTime.Builder.class);
+        }
+
+        // Construct using proto.TradingDataOuterClass.TradingData.TransTime.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          date_ = "";
+          time_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return proto.TradingDataOuterClass.internal_static_proto_TradingData_TransTime_descriptor;
+        }
+
+        @java.lang.Override
+        public proto.TradingDataOuterClass.TradingData.TransTime getDefaultInstanceForType() {
+          return proto.TradingDataOuterClass.TradingData.TransTime.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public proto.TradingDataOuterClass.TradingData.TransTime build() {
+          proto.TradingDataOuterClass.TradingData.TransTime result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public proto.TradingDataOuterClass.TradingData.TransTime buildPartial() {
+          proto.TradingDataOuterClass.TradingData.TransTime result = new proto.TradingDataOuterClass.TradingData.TransTime(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(proto.TradingDataOuterClass.TradingData.TransTime result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.date_ = date_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.time_ = time_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof proto.TradingDataOuterClass.TradingData.TransTime) {
+            return mergeFrom((proto.TradingDataOuterClass.TradingData.TransTime)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(proto.TradingDataOuterClass.TradingData.TransTime other) {
+          if (other == proto.TradingDataOuterClass.TradingData.TransTime.getDefaultInstance()) return this;
+          if (!other.getDate().isEmpty()) {
+            date_ = other.date_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          if (!other.getTime().isEmpty()) {
+            time_ = other.time_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  date_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  time_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object date_ = "";
+        /**
+         * <code>string date = 1;</code>
+         * @return The date.
+         */
+        public java.lang.String getDate() {
+          java.lang.Object ref = date_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            date_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string date = 1;</code>
+         * @return The bytes for date.
+         */
+        public com.google.protobuf.ByteString
+            getDateBytes() {
+          java.lang.Object ref = date_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            date_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string date = 1;</code>
+         * @param value The date to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDate(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          date_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string date = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDate() {
+          date_ = getDefaultInstance().getDate();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string date = 1;</code>
+         * @param value The bytes for date to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDateBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          date_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object time_ = "";
+        /**
+         * <code>string time = 2;</code>
+         * @return The time.
+         */
+        public java.lang.String getTime() {
+          java.lang.Object ref = time_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            time_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string time = 2;</code>
+         * @return The bytes for time.
+         */
+        public com.google.protobuf.ByteString
+            getTimeBytes() {
+          java.lang.Object ref = time_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            time_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string time = 2;</code>
+         * @param value The time to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTime(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          time_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string time = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTime() {
+          time_ = getDefaultInstance().getTime();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string time = 2;</code>
+         * @param value The bytes for time to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          time_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:proto.TradingData.TransTime)
+      }
+
+      // @@protoc_insertion_point(class_scope:proto.TradingData.TransTime)
+      private static final proto.TradingDataOuterClass.TradingData.TransTime DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new proto.TradingDataOuterClass.TradingData.TransTime();
+      }
+
+      public static proto.TradingDataOuterClass.TradingData.TransTime getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<TransTime>
+          PARSER = new com.google.protobuf.AbstractParser<TransTime>() {
+        @java.lang.Override
+        public TransTime parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<TransTime> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<TransTime> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public proto.TradingDataOuterClass.TradingData.TransTime getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int TRANSACTIONID_FIELD_NUMBER = 1;
     private int transactionId_ = 0;
     /**
-     * <code>int32 transaction_id = 1;</code>
+     * <code>int32 transactionId = 1;</code>
      * @return The transactionId.
      */
     @java.lang.Override
@@ -186,89 +834,11 @@ public final class TradingDataOuterClass {
       return transactionId_;
     }
 
-    public static final int DATE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object date_ = "";
-    /**
-     * <code>string date = 2;</code>
-     * @return The date.
-     */
-    @java.lang.Override
-    public java.lang.String getDate() {
-      java.lang.Object ref = date_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        date_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string date = 2;</code>
-     * @return The bytes for date.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDateBytes() {
-      java.lang.Object ref = date_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        date_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TIME_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object time_ = "";
-    /**
-     * <code>string time = 3;</code>
-     * @return The time.
-     */
-    @java.lang.Override
-    public java.lang.String getTime() {
-      java.lang.Object ref = time_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        time_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string time = 3;</code>
-     * @return The bytes for time.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTimeBytes() {
-      java.lang.Object ref = time_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        time_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int STOCK_SYMBOL_FIELD_NUMBER = 4;
+    public static final int STOCKSYMBOL_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object stockSymbol_ = "";
     /**
-     * <code>string stock_symbol = 4;</code>
+     * <code>string stockSymbol = 2;</code>
      * @return The stockSymbol.
      */
     @java.lang.Override
@@ -285,7 +855,7 @@ public final class TradingDataOuterClass {
       }
     }
     /**
-     * <code>string stock_symbol = 4;</code>
+     * <code>string stockSymbol = 2;</code>
      * @return The bytes for stockSymbol.
      */
     @java.lang.Override
@@ -303,11 +873,11 @@ public final class TradingDataOuterClass {
       }
     }
 
-    public static final int ACTION_FIELD_NUMBER = 5;
+    public static final int ACTION_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object action_ = "";
     /**
-     * <code>string action = 5;</code>
+     * <code>string action = 3;</code>
      * @return The action.
      */
     @java.lang.Override
@@ -324,7 +894,7 @@ public final class TradingDataOuterClass {
       }
     }
     /**
-     * <code>string action = 5;</code>
+     * <code>string action = 3;</code>
      * @return The bytes for action.
      */
     @java.lang.Override
@@ -342,10 +912,10 @@ public final class TradingDataOuterClass {
       }
     }
 
-    public static final int QUANTITY_FIELD_NUMBER = 6;
+    public static final int QUANTITY_FIELD_NUMBER = 4;
     private int quantity_ = 0;
     /**
-     * <code>int32 quantity = 6;</code>
+     * <code>int32 quantity = 4;</code>
      * @return The quantity.
      */
     @java.lang.Override
@@ -353,10 +923,10 @@ public final class TradingDataOuterClass {
       return quantity_;
     }
 
-    public static final int PRICE_FIELD_NUMBER = 7;
+    public static final int PRICE_FIELD_NUMBER = 5;
     private double price_ = 0D;
     /**
-     * <code>double price = 7;</code>
+     * <code>double price = 5;</code>
      * @return The price.
      */
     @java.lang.Override
@@ -364,11 +934,11 @@ public final class TradingDataOuterClass {
       return price_;
     }
 
-    public static final int NAME_FIELD_NUMBER = 8;
+    public static final int NAME_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
     /**
-     * <code>string name = 8;</code>
+     * <code>string name = 6;</code>
      * @return The name.
      */
     @java.lang.Override
@@ -385,7 +955,7 @@ public final class TradingDataOuterClass {
       }
     }
     /**
-     * <code>string name = 8;</code>
+     * <code>string name = 6;</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -403,11 +973,11 @@ public final class TradingDataOuterClass {
       }
     }
 
-    public static final int KERBEROS_FIELD_NUMBER = 9;
+    public static final int KERBEROS_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
     private volatile java.lang.Object kerberos_ = "";
     /**
-     * <code>string kerberos = 9;</code>
+     * <code>string kerberos = 7;</code>
      * @return The kerberos.
      */
     @java.lang.Override
@@ -424,7 +994,7 @@ public final class TradingDataOuterClass {
       }
     }
     /**
-     * <code>string kerberos = 9;</code>
+     * <code>string kerberos = 7;</code>
      * @return The bytes for kerberos.
      */
     @java.lang.Override
@@ -442,11 +1012,11 @@ public final class TradingDataOuterClass {
       }
     }
 
-    public static final int COMMENTS_FIELD_NUMBER = 10;
+    public static final int COMMENTS_FIELD_NUMBER = 8;
     @SuppressWarnings("serial")
     private volatile java.lang.Object comments_ = "";
     /**
-     * <code>string comments = 10;</code>
+     * <code>string comments = 8;</code>
      * @return The comments.
      */
     @java.lang.Override
@@ -463,7 +1033,7 @@ public final class TradingDataOuterClass {
       }
     }
     /**
-     * <code>string comments = 10;</code>
+     * <code>string comments = 8;</code>
      * @return The bytes for comments.
      */
     @java.lang.Override
@@ -479,6 +1049,32 @@ public final class TradingDataOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int TRANSTIME_FIELD_NUMBER = 9;
+    private proto.TradingDataOuterClass.TradingData.TransTime transTime_;
+    /**
+     * <code>.proto.TradingData.TransTime transTime = 9;</code>
+     * @return Whether the transTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasTransTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.proto.TradingData.TransTime transTime = 9;</code>
+     * @return The transTime.
+     */
+    @java.lang.Override
+    public proto.TradingDataOuterClass.TradingData.TransTime getTransTime() {
+      return transTime_ == null ? proto.TradingDataOuterClass.TradingData.TransTime.getDefaultInstance() : transTime_;
+    }
+    /**
+     * <code>.proto.TradingData.TransTime transTime = 9;</code>
+     */
+    @java.lang.Override
+    public proto.TradingDataOuterClass.TradingData.TransTimeOrBuilder getTransTimeOrBuilder() {
+      return transTime_ == null ? proto.TradingDataOuterClass.TradingData.TransTime.getDefaultInstance() : transTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -498,32 +1094,29 @@ public final class TradingDataOuterClass {
       if (transactionId_ != 0) {
         output.writeInt32(1, transactionId_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(date_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, date_);
-      }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(time_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, time_);
-      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(stockSymbol_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, stockSymbol_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, stockSymbol_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(action_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, action_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, action_);
       }
       if (quantity_ != 0) {
-        output.writeInt32(6, quantity_);
+        output.writeInt32(4, quantity_);
       }
       if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
-        output.writeDouble(7, price_);
+        output.writeDouble(5, price_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, name_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, name_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(kerberos_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 9, kerberos_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, kerberos_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(comments_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 10, comments_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, comments_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(9, getTransTime());
       }
       getUnknownFields().writeTo(output);
     }
@@ -538,34 +1131,32 @@ public final class TradingDataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, transactionId_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(date_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, date_);
-      }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(time_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, time_);
-      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(stockSymbol_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, stockSymbol_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, stockSymbol_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(action_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, action_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, action_);
       }
       if (quantity_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, quantity_);
+          .computeInt32Size(4, quantity_);
       }
       if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(7, price_);
+          .computeDoubleSize(5, price_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, name_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, name_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(kerberos_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, kerberos_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, kerberos_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(comments_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(10, comments_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, comments_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getTransTime());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -584,10 +1175,6 @@ public final class TradingDataOuterClass {
 
       if (getTransactionId()
           != other.getTransactionId()) return false;
-      if (!getDate()
-          .equals(other.getDate())) return false;
-      if (!getTime()
-          .equals(other.getTime())) return false;
       if (!getStockSymbol()
           .equals(other.getStockSymbol())) return false;
       if (!getAction()
@@ -603,6 +1190,11 @@ public final class TradingDataOuterClass {
           .equals(other.getKerberos())) return false;
       if (!getComments()
           .equals(other.getComments())) return false;
+      if (hasTransTime() != other.hasTransTime()) return false;
+      if (hasTransTime()) {
+        if (!getTransTime()
+            .equals(other.getTransTime())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -614,13 +1206,9 @@ public final class TradingDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TRANSACTION_ID_FIELD_NUMBER;
+      hash = (37 * hash) + TRANSACTIONID_FIELD_NUMBER;
       hash = (53 * hash) + getTransactionId();
-      hash = (37 * hash) + DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getDate().hashCode();
-      hash = (37 * hash) + TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getTime().hashCode();
-      hash = (37 * hash) + STOCK_SYMBOL_FIELD_NUMBER;
+      hash = (37 * hash) + STOCKSYMBOL_FIELD_NUMBER;
       hash = (53 * hash) + getStockSymbol().hashCode();
       hash = (37 * hash) + ACTION_FIELD_NUMBER;
       hash = (53 * hash) + getAction().hashCode();
@@ -635,6 +1223,10 @@ public final class TradingDataOuterClass {
       hash = (53 * hash) + getKerberos().hashCode();
       hash = (37 * hash) + COMMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getComments().hashCode();
+      if (hasTransTime()) {
+        hash = (37 * hash) + TRANSTIME_FIELD_NUMBER;
+        hash = (53 * hash) + getTransTime().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -754,21 +1346,25 @@ public final class TradingDataOuterClass {
 
       // Construct using proto.TradingDataOuterClass.TradingData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getTransTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
         transactionId_ = 0;
-        date_ = "";
-        time_ = "";
         stockSymbol_ = "";
         action_ = "";
         quantity_ = 0;
@@ -776,6 +1372,11 @@ public final class TradingDataOuterClass {
         name_ = "";
         kerberos_ = "";
         comments_ = "";
+        transTime_ = null;
+        if (transTimeBuilder_ != null) {
+          transTimeBuilder_.dispose();
+          transTimeBuilder_ = null;
+        }
         return this;
       }
 
@@ -813,32 +1414,34 @@ public final class TradingDataOuterClass {
           result.transactionId_ = transactionId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.date_ = date_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.time_ = time_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.stockSymbol_ = stockSymbol_;
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.action_ = action_;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.quantity_ = quantity_;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.price_ = price_;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.name_ = name_;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.kerberos_ = kerberos_;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.comments_ = comments_;
         }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.transTime_ = transTimeBuilder_ == null
+              ? transTime_
+              : transTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -856,24 +1459,14 @@ public final class TradingDataOuterClass {
         if (other.getTransactionId() != 0) {
           setTransactionId(other.getTransactionId());
         }
-        if (!other.getDate().isEmpty()) {
-          date_ = other.date_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getTime().isEmpty()) {
-          time_ = other.time_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
         if (!other.getStockSymbol().isEmpty()) {
           stockSymbol_ = other.stockSymbol_;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getAction().isEmpty()) {
           action_ = other.action_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.getQuantity() != 0) {
@@ -884,18 +1477,21 @@ public final class TradingDataOuterClass {
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getKerberos().isEmpty()) {
           kerberos_ = other.kerberos_;
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getComments().isEmpty()) {
           comments_ = other.comments_;
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000080;
           onChanged();
+        }
+        if (other.hasTransTime()) {
+          mergeTransTime(other.getTransTime());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -929,50 +1525,47 @@ public final class TradingDataOuterClass {
                 break;
               } // case 8
               case 18: {
-                date_ = input.readStringRequireUtf8();
+                stockSymbol_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
-                time_ = input.readStringRequireUtf8();
+                action_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 34: {
-                stockSymbol_ = input.readStringRequireUtf8();
+              case 32: {
+                quantity_ = input.readInt32();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 34
-              case 42: {
-                action_ = input.readStringRequireUtf8();
+              } // case 32
+              case 41: {
+                price_ = input.readDouble();
                 bitField0_ |= 0x00000010;
                 break;
-              } // case 42
-              case 48: {
-                quantity_ = input.readInt32();
+              } // case 41
+              case 50: {
+                name_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000020;
                 break;
-              } // case 48
-              case 57: {
-                price_ = input.readDouble();
+              } // case 50
+              case 58: {
+                kerberos_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000040;
                 break;
-              } // case 57
+              } // case 58
               case 66: {
-                name_ = input.readStringRequireUtf8();
+                comments_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
-                kerberos_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    getTransTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
-              case 82: {
-                comments_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -992,7 +1585,7 @@ public final class TradingDataOuterClass {
 
       private int transactionId_ ;
       /**
-       * <code>int32 transaction_id = 1;</code>
+       * <code>int32 transactionId = 1;</code>
        * @return The transactionId.
        */
       @java.lang.Override
@@ -1000,7 +1593,7 @@ public final class TradingDataOuterClass {
         return transactionId_;
       }
       /**
-       * <code>int32 transaction_id = 1;</code>
+       * <code>int32 transactionId = 1;</code>
        * @param value The transactionId to set.
        * @return This builder for chaining.
        */
@@ -1012,7 +1605,7 @@ public final class TradingDataOuterClass {
         return this;
       }
       /**
-       * <code>int32 transaction_id = 1;</code>
+       * <code>int32 transactionId = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearTransactionId() {
@@ -1022,153 +1615,9 @@ public final class TradingDataOuterClass {
         return this;
       }
 
-      private java.lang.Object date_ = "";
-      /**
-       * <code>string date = 2;</code>
-       * @return The date.
-       */
-      public java.lang.String getDate() {
-        java.lang.Object ref = date_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          date_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string date = 2;</code>
-       * @return The bytes for date.
-       */
-      public com.google.protobuf.ByteString
-          getDateBytes() {
-        java.lang.Object ref = date_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          date_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string date = 2;</code>
-       * @param value The date to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDate(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        date_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string date = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDate() {
-        date_ = getDefaultInstance().getDate();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string date = 2;</code>
-       * @param value The bytes for date to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDateBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        date_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object time_ = "";
-      /**
-       * <code>string time = 3;</code>
-       * @return The time.
-       */
-      public java.lang.String getTime() {
-        java.lang.Object ref = time_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          time_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string time = 3;</code>
-       * @return The bytes for time.
-       */
-      public com.google.protobuf.ByteString
-          getTimeBytes() {
-        java.lang.Object ref = time_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          time_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string time = 3;</code>
-       * @param value The time to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTime(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        time_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string time = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTime() {
-        time_ = getDefaultInstance().getTime();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string time = 3;</code>
-       * @param value The bytes for time to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTimeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        time_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object stockSymbol_ = "";
       /**
-       * <code>string stock_symbol = 4;</code>
+       * <code>string stockSymbol = 2;</code>
        * @return The stockSymbol.
        */
       public java.lang.String getStockSymbol() {
@@ -1184,7 +1633,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string stock_symbol = 4;</code>
+       * <code>string stockSymbol = 2;</code>
        * @return The bytes for stockSymbol.
        */
       public com.google.protobuf.ByteString
@@ -1201,7 +1650,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string stock_symbol = 4;</code>
+       * <code>string stockSymbol = 2;</code>
        * @param value The stockSymbol to set.
        * @return This builder for chaining.
        */
@@ -1209,22 +1658,22 @@ public final class TradingDataOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         stockSymbol_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string stock_symbol = 4;</code>
+       * <code>string stockSymbol = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearStockSymbol() {
         stockSymbol_ = getDefaultInstance().getStockSymbol();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string stock_symbol = 4;</code>
+       * <code>string stockSymbol = 2;</code>
        * @param value The bytes for stockSymbol to set.
        * @return This builder for chaining.
        */
@@ -1233,14 +1682,14 @@ public final class TradingDataOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         stockSymbol_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object action_ = "";
       /**
-       * <code>string action = 5;</code>
+       * <code>string action = 3;</code>
        * @return The action.
        */
       public java.lang.String getAction() {
@@ -1256,7 +1705,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string action = 5;</code>
+       * <code>string action = 3;</code>
        * @return The bytes for action.
        */
       public com.google.protobuf.ByteString
@@ -1273,7 +1722,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string action = 5;</code>
+       * <code>string action = 3;</code>
        * @param value The action to set.
        * @return This builder for chaining.
        */
@@ -1281,22 +1730,22 @@ public final class TradingDataOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         action_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string action = 5;</code>
+       * <code>string action = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearAction() {
         action_ = getDefaultInstance().getAction();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string action = 5;</code>
+       * <code>string action = 3;</code>
        * @param value The bytes for action to set.
        * @return This builder for chaining.
        */
@@ -1305,14 +1754,14 @@ public final class TradingDataOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         action_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private int quantity_ ;
       /**
-       * <code>int32 quantity = 6;</code>
+       * <code>int32 quantity = 4;</code>
        * @return The quantity.
        */
       @java.lang.Override
@@ -1320,23 +1769,23 @@ public final class TradingDataOuterClass {
         return quantity_;
       }
       /**
-       * <code>int32 quantity = 6;</code>
+       * <code>int32 quantity = 4;</code>
        * @param value The quantity to set.
        * @return This builder for chaining.
        */
       public Builder setQuantity(int value) {
 
         quantity_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 quantity = 6;</code>
+       * <code>int32 quantity = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuantity() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000008);
         quantity_ = 0;
         onChanged();
         return this;
@@ -1344,7 +1793,7 @@ public final class TradingDataOuterClass {
 
       private double price_ ;
       /**
-       * <code>double price = 7;</code>
+       * <code>double price = 5;</code>
        * @return The price.
        */
       @java.lang.Override
@@ -1352,23 +1801,23 @@ public final class TradingDataOuterClass {
         return price_;
       }
       /**
-       * <code>double price = 7;</code>
+       * <code>double price = 5;</code>
        * @param value The price to set.
        * @return This builder for chaining.
        */
       public Builder setPrice(double value) {
 
         price_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>double price = 7;</code>
+       * <code>double price = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearPrice() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
         price_ = 0D;
         onChanged();
         return this;
@@ -1376,7 +1825,7 @@ public final class TradingDataOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 8;</code>
+       * <code>string name = 6;</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -1392,7 +1841,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string name = 8;</code>
+       * <code>string name = 6;</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -1409,7 +1858,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string name = 8;</code>
+       * <code>string name = 6;</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -1417,22 +1866,22 @@ public final class TradingDataOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 8;</code>
+       * <code>string name = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
         name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 8;</code>
+       * <code>string name = 6;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -1441,14 +1890,14 @@ public final class TradingDataOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         name_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
 
       private java.lang.Object kerberos_ = "";
       /**
-       * <code>string kerberos = 9;</code>
+       * <code>string kerberos = 7;</code>
        * @return The kerberos.
        */
       public java.lang.String getKerberos() {
@@ -1464,7 +1913,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string kerberos = 9;</code>
+       * <code>string kerberos = 7;</code>
        * @return The bytes for kerberos.
        */
       public com.google.protobuf.ByteString
@@ -1481,7 +1930,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string kerberos = 9;</code>
+       * <code>string kerberos = 7;</code>
        * @param value The kerberos to set.
        * @return This builder for chaining.
        */
@@ -1489,22 +1938,22 @@ public final class TradingDataOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         kerberos_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>string kerberos = 9;</code>
+       * <code>string kerberos = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearKerberos() {
         kerberos_ = getDefaultInstance().getKerberos();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
       /**
-       * <code>string kerberos = 9;</code>
+       * <code>string kerberos = 7;</code>
        * @param value The bytes for kerberos to set.
        * @return This builder for chaining.
        */
@@ -1513,14 +1962,14 @@ public final class TradingDataOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         kerberos_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
 
       private java.lang.Object comments_ = "";
       /**
-       * <code>string comments = 10;</code>
+       * <code>string comments = 8;</code>
        * @return The comments.
        */
       public java.lang.String getComments() {
@@ -1536,7 +1985,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string comments = 10;</code>
+       * <code>string comments = 8;</code>
        * @return The bytes for comments.
        */
       public com.google.protobuf.ByteString
@@ -1553,7 +2002,7 @@ public final class TradingDataOuterClass {
         }
       }
       /**
-       * <code>string comments = 10;</code>
+       * <code>string comments = 8;</code>
        * @param value The comments to set.
        * @return This builder for chaining.
        */
@@ -1561,22 +2010,22 @@ public final class TradingDataOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         comments_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>string comments = 10;</code>
+       * <code>string comments = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearComments() {
         comments_ = getDefaultInstance().getComments();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
       /**
-       * <code>string comments = 10;</code>
+       * <code>string comments = 8;</code>
        * @param value The bytes for comments to set.
        * @return This builder for chaining.
        */
@@ -1585,9 +2034,130 @@ public final class TradingDataOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         comments_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
+      }
+
+      private proto.TradingDataOuterClass.TradingData.TransTime transTime_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.TradingDataOuterClass.TradingData.TransTime, proto.TradingDataOuterClass.TradingData.TransTime.Builder, proto.TradingDataOuterClass.TradingData.TransTimeOrBuilder> transTimeBuilder_;
+      /**
+       * <code>.proto.TradingData.TransTime transTime = 9;</code>
+       * @return Whether the transTime field is set.
+       */
+      public boolean hasTransTime() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.proto.TradingData.TransTime transTime = 9;</code>
+       * @return The transTime.
+       */
+      public proto.TradingDataOuterClass.TradingData.TransTime getTransTime() {
+        if (transTimeBuilder_ == null) {
+          return transTime_ == null ? proto.TradingDataOuterClass.TradingData.TransTime.getDefaultInstance() : transTime_;
+        } else {
+          return transTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.proto.TradingData.TransTime transTime = 9;</code>
+       */
+      public Builder setTransTime(proto.TradingDataOuterClass.TradingData.TransTime value) {
+        if (transTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          transTime_ = value;
+        } else {
+          transTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.proto.TradingData.TransTime transTime = 9;</code>
+       */
+      public Builder setTransTime(
+          proto.TradingDataOuterClass.TradingData.TransTime.Builder builderForValue) {
+        if (transTimeBuilder_ == null) {
+          transTime_ = builderForValue.build();
+        } else {
+          transTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.proto.TradingData.TransTime transTime = 9;</code>
+       */
+      public Builder mergeTransTime(proto.TradingDataOuterClass.TradingData.TransTime value) {
+        if (transTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            transTime_ != null &&
+            transTime_ != proto.TradingDataOuterClass.TradingData.TransTime.getDefaultInstance()) {
+            getTransTimeBuilder().mergeFrom(value);
+          } else {
+            transTime_ = value;
+          }
+        } else {
+          transTimeBuilder_.mergeFrom(value);
+        }
+        if (transTime_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.proto.TradingData.TransTime transTime = 9;</code>
+       */
+      public Builder clearTransTime() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        transTime_ = null;
+        if (transTimeBuilder_ != null) {
+          transTimeBuilder_.dispose();
+          transTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.proto.TradingData.TransTime transTime = 9;</code>
+       */
+      public proto.TradingDataOuterClass.TradingData.TransTime.Builder getTransTimeBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getTransTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.proto.TradingData.TransTime transTime = 9;</code>
+       */
+      public proto.TradingDataOuterClass.TradingData.TransTimeOrBuilder getTransTimeOrBuilder() {
+        if (transTimeBuilder_ != null) {
+          return transTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return transTime_ == null ?
+              proto.TradingDataOuterClass.TradingData.TransTime.getDefaultInstance() : transTime_;
+        }
+      }
+      /**
+       * <code>.proto.TradingData.TransTime transTime = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.TradingDataOuterClass.TradingData.TransTime, proto.TradingDataOuterClass.TradingData.TransTime.Builder, proto.TradingDataOuterClass.TradingData.TransTimeOrBuilder> 
+          getTransTimeFieldBuilder() {
+        if (transTimeBuilder_ == null) {
+          transTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.TradingDataOuterClass.TradingData.TransTime, proto.TradingDataOuterClass.TradingData.TransTime.Builder, proto.TradingDataOuterClass.TradingData.TransTimeOrBuilder>(
+                  getTransTime(),
+                  getParentForChildren(),
+                  isClean());
+          transTime_ = null;
+        }
+        return transTimeBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:proto.TradingData)
@@ -1646,6 +2216,11 @@ public final class TradingDataOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_proto_TradingData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_TradingData_TransTime_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_proto_TradingData_TransTime_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1656,11 +2231,13 @@ public final class TradingDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!src/main/proto/trading_data.proto\022\005pro" +
-      "to\"\272\001\n\013TradingData\022\026\n\016transaction_id\030\001 \001" +
-      "(\005\022\014\n\004date\030\002 \001(\t\022\014\n\004time\030\003 \001(\t\022\024\n\014stock_" +
-      "symbol\030\004 \001(\t\022\016\n\006action\030\005 \001(\t\022\020\n\010quantity" +
-      "\030\006 \001(\005\022\r\n\005price\030\007 \001(\001\022\014\n\004name\030\010 \001(\t\022\020\n\010k" +
-      "erberos\030\t \001(\t\022\020\n\010comments\030\n \001(\tb\006proto3"
+      "to\"\366\001\n\013TradingData\022\025\n\rtransactionId\030\001 \001(" +
+      "\005\022\023\n\013stockSymbol\030\002 \001(\t\022\016\n\006action\030\003 \001(\t\022\020" +
+      "\n\010quantity\030\004 \001(\005\022\r\n\005price\030\005 \001(\001\022\014\n\004name\030" +
+      "\006 \001(\t\022\020\n\010kerberos\030\007 \001(\t\022\020\n\010comments\030\010 \001(" +
+      "\t\022/\n\ttransTime\030\t \001(\0132\034.proto.TradingData" +
+      ".TransTime\032\'\n\tTransTime\022\014\n\004date\030\001 \001(\t\022\014\n" +
+      "\004time\030\002 \001(\tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1671,7 +2248,13 @@ public final class TradingDataOuterClass {
     internal_static_proto_TradingData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_proto_TradingData_descriptor,
-        new java.lang.String[] { "TransactionId", "Date", "Time", "StockSymbol", "Action", "Quantity", "Price", "Name", "Kerberos", "Comments", });
+        new java.lang.String[] { "TransactionId", "StockSymbol", "Action", "Quantity", "Price", "Name", "Kerberos", "Comments", "TransTime", });
+    internal_static_proto_TradingData_TransTime_descriptor =
+      internal_static_proto_TradingData_descriptor.getNestedTypes().get(0);
+    internal_static_proto_TradingData_TransTime_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_proto_TradingData_TransTime_descriptor,
+        new java.lang.String[] { "Date", "Time", });
     descriptor.resolveAllFeaturesImmutable();
   }
 
